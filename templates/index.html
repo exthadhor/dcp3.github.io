@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Judul Halaman -->
+	<title>AI-DCP3</title>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Icon -->
+	<link rel="shortcut icon" href="{{ url_for('static', filename='logo_exploitation_4.png') }}">
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href={{ url_for('static', filename='/css/bootstrap.min.css') }} type="text/css">
+	<link rel="stylesheet" href={{ url_for('static', filename='/css/client_side.css') }}  type="text/css">
+  <link rel="stylesheet" href={{ url_for('static', filename='/css/custom.css') }} 
+type="text/css">
+  <link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- css card di form option-->
+  <link rel="stylesheet1" href={{ url_for('static', filename='/css/bootstrap.min1.css') }} 
+type="text/css">
+  <link rel="stylesheet1" href={{ url_for('static', filename='/css/docs.css') }} 
+type="text/css">
+  
+	
+	<!-- JavaScript -->
+	<script src={{ url_for('static', filename='/js/jquery_3.6.0.min.js') }} ></script>
+	<script src={{ url_for('static', filename='/js/bootstrap_3.4.1.min.js') }} ></script>
+<!-- javascript card di form option-->
+  <script src={{ url_for('static', filename='/js/bootstrap.bundle1.min.js') }} ></script>
+</head>
+
+<body id="halamanku" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+
+	<!-- Navigation Bar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+      
+			<!-- Logo -->
+			<div class="navbar-header row">
+				<img 
+          src={{ url_for('static', filename='/images/logo_exploitation_4.png') }} alt="Orbit Logo" 
+				width="50" height="50" align="left">
+				<a class="navbar-brand" href="#halamanku">&#160; Exploitation 4</a>
+			</div>
+
+			<!-- Daftar Halaman -->
+      <div class="collapse navbar-collapse" id="myNavbar"><ul class="nav navbar-nav navbar-right">
+        <li><a href="#informasi">INFORMASI</a></li>
+        <li><a href="#aplikasi">APLIKASI</a></li>
+        <li><a href="#anggotakelompok">ANGGOTA</a></li>
+        </ul>
+      </div>
+
+		</div>
+    
+	</nav>
+
+	<!-- Bagian Halaman (Informasi) -->
+	<div id="informasi" class="container-fluid">
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-sm-6">
+				<!-- Deskripsi Aplikasi -->
+        <img 
+          src={{ url_for('static', filename='/images/logo_exploitation.png') }} alt="Orbit Logo" 
+				width="400" height="110">
+        <br>
+        <h4>Prediksi Harga Rumah Impian Anda</h4> 
+				<p style="text-align: justify;text-justify: inter-word;">
+          Selamat datang di AI-DCP3! Temukan keajaiban rumah impian Anda di wilayah Jabodetabek melalui aplikasi inovatif kami. Sederhanakan pencarian dengan memasukkan preferensi Anda, seperti lokasi yang diinginkan, luas tanah, luas bangunan, jumlah kamar tidur, kamar mandi, daya listrik, dan fasilitas garasi. Dengan kecerdasan buatan yang canggih, kami tidak hanya memprediksi harga yang pas, tetapi juga memberikan rekomendasi rumah yang secara sempurna mencerminkan keinginan Anda. Jelajahi dunia properti dengan AI-DCP3, di mana setiap klik membawa Anda lebih dekat pada impian rumah Anda. Mari temukan lebih lanjut di bawah ini!				</p>
+				<br>
+
+				<!-- Tombol Mulai -->
+				<nav id="navgo" class="navbar" style="background-color:#ffffff;z-index: 0;border:none">
+					<ul class="nav nav-pills" >
+						<li class="nav-item">
+							<a class="btn btn-default btn-lg" href="#aplikasi" style="background-color:#000000;color:#ffffff ">Mulai</a>
+						</li>
+					</ul>
+				</nav>
+      </div>
+
+      <div class="col-sm-6">
+        <br>
+				<br>
+				<!-- Gambar Deskripsi Aplikasi -->
+				<img 
+          style="border-radius: 1em;"
+          src={{ url_for('static', filename='/images/rumah-minimalis2.jpg') }} width="600" ></img>
+      </div>
+    </div>
+    
+  </div>
+		
+	
+
+	<!-- Bagian Halaman (Aplikasi) -->
+	<div id="aplikasi" data-bs-spy="scroll" data-bs-target="#navgo" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-sm-12">
+				</br>
+				<!-- Input Nilai Pengukuran dari Pengguna -->
+        <div class="container">
+          <h3 style="margin-left: px;"><b>Masukkan data rumah yang ingin anda cari</b></h3>
+        </div>
+        
+        <div class="container">
+          <div class="opt-group">
+            <form action="app/app.py" class="w-100 form-lokasi">
+              <label for="lokasi" style="width:100%;">Lokasi Rumah:</label>
+              <select name="lokasi" id="lokasi" class="select-app">
+                <optgroup label="Lokasi">
+                  <option classname="opt" value="Lokasi">-Lokasi Rumah-</option>
+                  <option classname="opt" value="0">Kota Jakarta</option>
+                  <option classname="opt" value="1">Kota Bogor</option>
+                  <option classname="opt" value="2">Kabupaten Bogor</option>
+                  <option classname="opt" value="3">Kota Depok</option>
+                  <option classname="opt" value="4">Kota Tanggerang</option>
+                  <option classname="opt" value="5">Kota Bekasi</option>
+                  <option classname="opt" value="6">Kabupaten Bekasi</option>
+                </optgroup>
+              </select>
+            </form>
+          </div>
+        
+          <br/>
+        
+          <div class="d-flex justify-content-around">
+            <div class="form-group col">
+              <label for="luas_tanah">Luas Tanah:</label>
+              <input type="number" class="form-control" id="luas_tanah" placeholder="Luas Tanah" value="100">
+            </div>
+        
+            <div class="form-group col">
+              <label for="luas_bangunan">Luas Bangunan:</label>
+              <input type="number" class="form-control" id="luas_bangunan" placeholder="Luas Bangunan" value="100">
+            </div>
+          </div>
+        
+          <div class="container mult-opt">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <form action="app/app.py">
+                  <label for="listrik">Daya Listrik:</label>
+                  <select name="listrik" id="listrik" class="select-app">
+                    <optgroup label="Listrik">
+                      <option classname="opt" value="listrik">-Jenis Daya listrik-</option>
+                      <option classname="opt" value="900">900</option>
+                      <option classname="opt" value="1300">1300</option>
+                      <option classname="opt" value="2200">2200</option>
+                      <option classname="opt" value="3500">3500</option>
+                      <option classname="opt" value="4400">4400</option>
+                      <option classname="opt" value="5500">5500</option>
+                    </optgroup>
+                  </select>
+                </form>
+              </div>
+        
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <form action="app/app.py">
+                  <label for="kamar_tidur">Jumlah kamar tidur:</label>
+                  <select name="kamar_tidur" id="kamar_tidur" class="select-app">
+                    <optgroup label="Kamar_Tidur">
+                      <option classname="opt" value="KT">-Jumlah kamar tidur-</option>
+                      <option classname="opt" value="1">1</option>
+                      <option classname="opt" value="2">2</option>
+                      <option classname="opt" value="3">3</option>
+                      <option classname="opt" value="4">4</option>
+                      <option classname="opt" value="5">5</option>
+                      <option classname="opt" value="6">6</option>
+                      <option classname="opt" value="7">7</option>
+                      <option classname="opt" value="8">8</option>
+                      <option classname="opt" value="9">9</option>
+                      <option classname="opt" value="10">10</option>
+                    </optgroup>
+                  </select>
+                </form>
+              </div>
+        
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <form action="app/app.py">
+                  <label for="kamar_mandi">Jumlah kamar mandi:</label>
+                  <select name="kamar_mandi" id="kamar_mandi" class="select-app">
+                    <optgroup label="Kamar_Mandi">
+                      <option classname="opt" value="KM">-Jumlah kamar mandi-</option>
+                      <option classname="opt" value="1">1</option>
+                      <option classname="opt" value="2">2</option>
+                      <option classname="opt" value="3">3</option>
+                      <option classname="opt" value="4">4</option>
+                      <option classname="opt" value="5">5</option>
+                      <option classname="opt" value="6">6</option>
+                      <option classname="opt" value="7">7</option>
+                      <option classname="opt" value="8">8</option>
+                      <option classname="opt" value="9">9</option>
+                      <option classname="opt" value="10">10</option>
+                    </optgroup>
+                  </select>
+                </form>
+              </div>
+        
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <form action="app/app.py">
+                  <label for="garasi">Garasi: </label>
+                  <select name="garasi" id="garasi" class="select-app">
+                    <optgroup label="Garasi">
+                      <option classname="opt" value="Garasi">-Apakah ada Garasi?-</option>
+                      <option classname="opt" value="0">Ada</option>
+                      <option classname="opt" value="1">Tidak Ada</option>
+                    </optgroup>
+                  </select>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row"
+          style="
+          display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+          padding-top: 5px;
+          ">
+          <button type="submit" id="prediksi_submit" class="btn btn-default btn-lg">Prediksi</button>
+        </div>
+      </div>
+      <div class="container">
+        <div class="col">
+        <br>
+        <h3 style="margin-left: 50px;"><b>Hasil Prediksi :   </b></h3>
+        <div id="hasil_prediksi" align="center">
+						<!-- Hasil Prediksi akan ditampilkan di sini-->
+        </div>
+        </div>
+      </div>
+      <br>
+      <br>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <!-- Bagian Anggota Kelompok  -->
+  
+  <div id="anggotakelompok" class="container mt-4">
+    <h3 class="mt-4"><b>Anggota Kelompok</b></h3>
+</div>
+
+<section class="review" id="review">
+    <h1 class="heading"></h1>
+    <div class="swiper-container review-slider">
+        <div class="swiper-wrapper" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+            <div class="swiper-slide" style="width: 48%; margin-bottom: 20px;">
+                <div class="box">
+                    <img src="{{ url_for('static', filename='/images/naufal.jpeg') }}" alt="img_naufal">
+                    <h3>MUHAMMAD NAUFAL</h3>
+                    <p>Universitas Malikussaleh | Teknik Informatika</p>
+                    <p>Division FrontEnd</p>
+                    <a class="github-btn btn btn-default btn-lg fa-brands fa-github" href="https://github.com/exthadhor" style="color:#000000 ;border-color: #000000;"> Github</a>
+                    <a class="github-btn btn btn-default btn-lg fa fa-brands fa-linkedin" href="https://www.linkedin.com/in/muhammad-naufal-139b17298/" style="color:#000000 ;border-color: #000000;"> Linkedln</a>
+                </div>
+            </div>
+            
+            <div class="swiper-slide" style="width: 48%; margin-bottom: 20px;">
+                <div class="box">
+                    <img src="{{ url_for('static', filename='/images/caca.jpeg') }}" alt="img_caca">
+                    <h3>RIZKA SALSABILA NASUTION</h3>
+                    <p>Universitas Malikussaleh | Teknik Informatika</p>
+                    <p>Division Technical Writer</p>
+                    <a class="github-btn btn btn-default btn-lg fa-brands fa-github" href="https://github.com/" style="color:#000000 ;border-color: #000000;"> Github</a>
+                    <a class="github-btn btn btn-default btn-lg fa fa-brands fa-linkedin" href="https://www.linkedin.com/in/" style="color:#000000 ;border-color: #000000;"> Linkedln</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide" style="width: 48%; margin-bottom: 20px;">
+              <div class="box">
+                  <img src="{{ url_for('static', filename='/images/amny.jpeg') }}" alt="img_amny">
+                  <h3>Amny Yasira</h3>
+                  <p>Universitas Malikussaleh | Teknik Informatika</p>
+                  <p>Division Data Engineer</p>
+                  <a class="github-btn btn btn-default btn-lg fa-brands fa-github" href="https://github.com/" style="color:#000000 ;border-color: #000000;"> Github</a>
+                  <a class="github-btn btn btn-default btn-lg fa fa-brands fa-linkedin" href="https://www.linkedin.com/in/" style="color:#000000 ;border-color: #000000;"> Linkedln</a>
+              </div>
+            </div>
+
+            <div class="swiper-slide" style="width: 48%; margin-bottom: 20px;">
+              <div class="box">
+                  <img src="{{ url_for('static', filename='/images/asrina.jpg') }}" alt="img_asrina">
+                  <h3>Asrina Simajuntak</h3>
+                  <p>Universitas Negeri Medan | Biologi</p>
+                  <p>Division ML Engineer</p>
+                  <a class="github-btn btn btn-default btn-lg fa-brands fa-github" href="https://github.com/" style="color:#000000 ;border-color: #000000;"> Github</a>
+                  <a class="github-btn btn btn-default btn-lg fa fa-brands fa-linkedin" href="https://www.linkedin.com/in/" style="color:#000000 ;border-color: #000000;"> Linkedln</a>
+              </div>
+            </div>
+
+            <div class="swiper-slide" style="width: 48%; margin-bottom: 20px;">
+              <div class="box">
+                  <img src="{{ url_for('static', filename='/images/miranda.jpeg') }}" alt="img_miranda">
+                  <h3>Miranda Elisa Br Sembiring</h3>
+                  <p>Universitas HKBP Nommensen | Pendidikan Bahasa dan Sastra Indonesia</p>
+                  <p>Division BackEnd</p>
+                  <a class="github-btn btn btn-default btn-lg fa-brands fa-github" href="https://github.com/" style="color:#000000 ;border-color: #000000;"> Github</a>
+                  <a class="github-btn btn btn-default btn-lg fa fa-brands fa-linkedin" href="https://www.linkedin.com/in/" style="color:#000000 ;border-color: #000000;"> Linkedln</a>
+              </div>
+            </div>
+
+            <div class="swiper-slide" style="width: 48%; margin-bottom: 20px;">
+              <div class="box">
+                  <img src="{{ url_for('static', filename='/images/akbar.jpg') }}" alt="img_akbar">
+                  <h3>Mhd Akbar Fallaqhi</h3>
+                  <p>Politeknik Negeri Medan | Manajemen Informatika</p>
+                  <p>Division UI/UX Designer</p>
+                  <a class="github-btn btn btn-default btn-lg fa-brands fa-github" href="https://github.com/" style="color:#000000 ;border-color: #000000;"> Github</a>
+                  <a class="github-btn btn btn-default btn-lg fa fa-brands fa-linkedin" href="https://www.linkedin.com/in/" style="color:#000000 ;border-color: #000000;"> Linkedln</a>
+              </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+<!-- Footer -->
+<footer class="container-fluid footer">
+  <div class="footer-left">
+      <h3>AI-DCP3</h3>
+      <ul>
+          <li><a href="#halamanku" style="color:#ffffff">Perusahaan</a></li>
+          <li><a href="#halamanku" style="color:#ffffff">Tentang Kami</a></li>
+          <li><a href="#halamanku" style="color:#ffffff">Kebijakan Privasi</a></li>
+      </ul>
+  </div>
+
+  <div class="footer-center">
+      <p><span>Hubungi Kami</span></p>
+      <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Indonesia</span></p>
+      </div>
+      <div>
+          <i class="fa fa-phone"></i>
+          <p>+62 812-634-47</p>
+      </div>
+      <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="#">exploitation4@gmail.com</a></p>
+      </div>
+  </div>
+
+  <div class="footer-right">
+      <p class="footer-about">
+          <span>About</span>
+          AI-DCP3 akan membantu anda memprediksi harga dan memberikan rekomendasi rumah sesuai dengan keinginan Anda.
+      </p>
+
+      <div class="footer-media">
+          <a href="#"><i class="fa fa-youtube"></i></a>
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+      </div>
+  </div>
+
+  <a href="#halamanku" title="To Top">
+      <span class="glyphicon glyphicon-chevron-up col-xs-12 text-right"></span>
+  </a>
+  
+  <div class="container text-center">
+      <p>Kelompok Exploitation 4 <br><a href="https://.com/">Exploitation 4 Orbit</a></p>
+  </div>
+</footer>
+
+
+	<!-- JavaScript untuk Animasi Scroll dan Prediksi Model -->
+	<script  src={{ url_for('static', filename='/js/client_side.js') }}></script>
+
+</body>
+</html>
